@@ -1,13 +1,22 @@
 {
-  "_comment": "Watt-Sensors OTA pull manifest. Lu par le firmware Watt-Sensors via raw.githubusercontent.com. À regénérer manuellement à chaque release. SHA-256 = hash du firmware.bin sortie de pio run.",
-  "_doc": "Format : pour chaque firmware (sensors), lister les envs supportés avec leur firmware_url GitHub Release PUBLIQUE + sha256 + size. Le device matche son env via build_flag BOARD_ENV=\"<env_name>\". Les binaires sont hébergés en GitHub Releases sur ce repo PUBLIC. filesystem_url/sha/size optionnels par env.",
+  "_comment": "Watt-Sensors OTA pull manifest. Lu par le firmware Watt-Sensors via raw.githubusercontent.com. SHA-256 = hash du firmware.bin sortie de pio run.",
+  "_doc": "Format : pour chaque firmware (sensors), lister les envs supportés avec leur firmware_url GitHub Release + sha256 + size. filesystem_url/sha/size optionnels par env.",
   "sensors": {
     "version": "2026.05",
-    "_test_phase_note": "build_fw=9999 et build_fs=9999 sentinelles pendant la phase de test EVO-104 portage. Permet d'afficher toujours 'DISPONIBLE' au device pour itérer sans bumper à chaque correction. À ramener aux valeurs réelles quand stable.",
+    "_test_phase_note": "build_fw=9999 et build_fs=9999 sentinelles pendant la phase de test EVO-104 portage. Les binaires pointés sont FW31/FS21 watt-sensors.",
     "build_fw": 9999,
     "build_fs": 9999,
-    "released_at": "2026-05-05T00:00:00Z",
-    "envs": {},
-    "changelog": "Skeleton initial — repo créé pour portage EVO-104 OTA pull sur watt-sensors. Aucun binaire encore publié. À peupler après premier build."
+    "released_at": "2026-05-05T08:00:00Z",
+    "envs": {
+      "watt-sensors": {
+        "firmware_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v31/firmware-watt-sensors.bin",
+        "sha256": "1e709f6acc782a4af099dfe08776c56f9cf38ce31b49e05fafb0a016bd84ccfe",
+        "size": 1314016,
+        "filesystem_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v31/spiffs-watt-sensors.bin",
+        "filesystem_sha256": "790453f2be7162d685999245bc8f1b8828a037e947dbcbc29105ae1ad6d734aa",
+        "filesystem_size": 1048576
+      }
+    },
+    "changelog": "FW31+FS21 / EVO-104 portage initial — pipeline OTA pull intégré (FW + FS via esp_partition_write direct), recovery mode page PROGMEM, modal UX moins anxiogène (label inline rebooting, striped+animated bar), pollUntilReady strict 60s. Tasks suspendues en section critique : myTaskdallasread, myTasksendtomqtt, myTaskmdnsdiscovery, myTaskserialreadtask. myTaskkeepwifialive2 GARDÉE active. Sidebar /update retiré des 7 pages."
   }
 }

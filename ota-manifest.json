@@ -3,19 +3,19 @@
   "_doc": "Format : pour chaque firmware (sensors), lister les envs supportés avec leur firmware_url GitHub Release + sha256 + size. filesystem_url/sha/size optionnels par env.",
   "sensors": {
     "version": "2026.05",
-    "build_fw": 40,
-    "build_fs": 30,
-    "released_at": "2026-05-06T15:50:00Z",
+    "build_fw": 41,
+    "build_fs": 31,
+    "released_at": "2026-05-06T15:55:00Z",
     "envs": {
       "watt-sensors": {
-        "firmware_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v40/sensors-firmware.bin",
-        "sha256": "91dcdf75ae0c5eb1e69cf218febf67fef8d0e6f5aaf4c8481e74aafaf8dcd6af",
+        "firmware_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v41/sensors-firmware.bin",
+        "sha256": "5d684eaea89cd76d5cfe86ca75127e2851ce5ca73bb81588546ec1f31d4fb6a7",
         "size": 1336224,
-        "filesystem_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v40/sensors-spiffs.bin",
-        "filesystem_sha256": "96ae58e04646dcc1f4a197a2f865a6e6fe5bb67887b2bc0d48191532cc651529",
+        "filesystem_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v41/sensors-spiffs.bin",
+        "filesystem_sha256": "5411daac36fa71d9a7725a0492dd2579ac065d26f43fb63551eb31aa0c388842",
         "filesystem_size": 1048576
       }
     },
-    "changelog": "FW40+FS30 — Task perpétuelle (defer 5s post-boot, retry 5 min) qui appelle proxy_discover_now() si config.proxy_enabled. Carte 'Délégation HTTPS' du dashboard active dès startup, plus seulement après une OTA. FS30 inchangé vs v39."
+    "changelog": "FW41+FS31 — Polling périodique GET /info supprimé sur info.html (5s avant). Les valeurs de la carte Identité sont statiques. Pour rafraîchir après MAJ, recharger la page."
   }
 }

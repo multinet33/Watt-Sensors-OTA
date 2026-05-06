@@ -3,9 +3,9 @@
   "_doc": "Format : pour chaque firmware (sensors), lister les envs supportés avec leur firmware_url GitHub Release + sha256 + size. filesystem_url/sha/size optionnels par env.",
   "sensors": {
     "version": "2026.04",
-    "build_fw": 51,
-    "build_fs": 37,
-    "released_at": "2026-05-06T18:49:03Z",
+    "build_fw": 52,
+    "build_fs": 38,
+    "released_at": "2026-05-06T19:27:34Z",
     "envs": {
       "esp32-s3-headless": {
         "firmware_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v47/firmware-esp32-s3-headless.bin",
@@ -16,14 +16,14 @@
         "filesystem_size": 4194304
       },
       "esp32-wroom32d": {
-        "firmware_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v51/firmware-esp32-wroom32d.bin",
-        "sha256": "9e09bb14d426594caabd0011fea07d0843c7f45cd8eca04b2e2e449f9583a959",
-        "size": 1337216,
-        "filesystem_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v51/spiffs-esp32-wroom32d.bin",
-        "filesystem_sha256": "ef211bd9d363a8c2f2a2df094787d4b463d335280310ca66c0cc1af6a766edfe",
+        "firmware_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v52/firmware-esp32-wroom32d.bin",
+        "sha256": "6c6de75b92e6a446e2515384dcd8ba625cf474a0d64bb7bd40a7b55c637e27bc",
+        "size": 1337600,
+        "filesystem_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v52/spiffs-esp32-wroom32d.bin",
+        "filesystem_sha256": "d807bf7ef1af67f6a8fd3198b3bd9aee8433c60541d6d2529d21fcc8bfb1fbcb",
         "filesystem_size": 1048576
       }
     },
-    "changelog": "FW51+FS37 — fix download incomplet"
+    "changelog": "FW52+FS38 : Bump +1"
   }
 }

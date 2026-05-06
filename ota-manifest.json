@@ -3,19 +3,19 @@
   "_doc": "Format : pour chaque firmware (sensors), lister les envs supportés avec leur firmware_url GitHub Release + sha256 + size. filesystem_url/sha/size optionnels par env.",
   "sensors": {
     "version": "2026.05",
-    "build_fw": 41,
+    "build_fw": 42,
     "build_fs": 31,
-    "released_at": "2026-05-06T15:55:00Z",
+    "released_at": "2026-05-06T16:04:00Z",
     "envs": {
       "watt-sensors": {
-        "firmware_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v41/sensors-firmware.bin",
-        "sha256": "5d684eaea89cd76d5cfe86ca75127e2851ce5ca73bb81588546ec1f31d4fb6a7",
+        "firmware_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v42/sensors-firmware.bin",
+        "sha256": "08b0941b797f122e2d11eda760d66a37f7414b939c4b94de60d9886cf652b5f3",
         "size": 1336224,
-        "filesystem_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v41/sensors-spiffs.bin",
+        "filesystem_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v42/sensors-spiffs.bin",
         "filesystem_sha256": "5411daac36fa71d9a7725a0492dd2579ac065d26f43fb63551eb31aa0c388842",
         "filesystem_size": 1048576
       }
     },
-    "changelog": "FW41+FS31 — Polling périodique GET /info supprimé sur info.html (5s avant). Les valeurs de la carte Identité sont statiques. Pour rafraîchir après MAJ, recharger la page."
+    "changelog": "FW42+FS31 — Bail-out OTA_HEAP_CRITICAL 32→36 KB. Fix crash StoreProhibited terrain à heap=32756 (la fenêtre 32-36 KB faisait crasher beginCriticalSection() en suspend tasks). Maintenant reboot pending propre dans cette fenêtre. SPIFFS inchangé."
   }
 }

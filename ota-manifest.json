@@ -3,19 +3,19 @@
   "_doc": "Format : pour chaque firmware (sensors), lister les envs supportés avec leur firmware_url GitHub Release + sha256 + size. filesystem_url/sha/size optionnels par env.",
   "sensors": {
     "version": "2026.05",
-    "build_fw": 38,
-    "build_fs": 29,
-    "released_at": "2026-05-06T15:35:00Z",
+    "build_fw": 39,
+    "build_fs": 30,
+    "released_at": "2026-05-06T15:48:00Z",
     "envs": {
       "watt-sensors": {
-        "firmware_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v38/sensors-firmware.bin",
-        "sha256": "b53a0dbf5a86dfa4dba10b3fae839ba7ecea6976d3a3f7406819b05e537633a2",
+        "firmware_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v39/sensors-firmware.bin",
+        "sha256": "0a88058c9aac4f43cb0f42e6e62791f2a20ef73719b60158d5267cda5e285b57",
         "size": 1335920,
-        "filesystem_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v38/sensors-spiffs.bin",
-        "filesystem_sha256": "d9317af41656a2a840aef8d92a0e086ef29cd6bfe791862159c9b338b04dd759",
+        "filesystem_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v39/sensors-spiffs.bin",
+        "filesystem_sha256": "96ae58e04646dcc1f4a197a2f865a6e6fe5bb67887b2bc0d48191532cc651529",
         "filesystem_size": 1048576
       }
     },
-    "changelog": "FW38+FS29 — Rebuild firmware avec BUILD_FS=29 compile-time (fix mismatch carte Identité signalé sur v37, où le binary FW37 avait BUILD_FS=27 alors que SPIFFS embarquait /fs_build=29). Aucune autre modif fonctionnelle vs v37."
+    "changelog": "FW39+FS30 — Fix critique race bootloader : après cache-clear, $(document).ready exécuté avant jQuery → page rendue sans données. Helper window.afterChain(cb) appliqué sur les 8 pages STA défère le init jusqu'à chain done."
   }
 }

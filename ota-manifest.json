@@ -3,9 +3,9 @@
   "_doc": "Format : pour chaque firmware (sensors), lister les envs supportés avec leur firmware_url GitHub Release + sha256 + size. filesystem_url/sha/size optionnels par env.",
   "sensors": {
     "version": "2026.04",
-    "build_fw": 46,
+    "build_fw": 47,
     "build_fs": 35,
-    "released_at": "2026-05-06T16:27:52Z",
+    "released_at": "2026-05-06T17:30:11Z",
     "envs": {
       "watt-sensors": {
         "firmware_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v45/firmware-watt-sensors.bin",
@@ -16,14 +16,14 @@
         "filesystem_size": 1048576
       },
       "esp32-s3-headless": {
-        "firmware_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v46/firmware-esp32-s3-headless.bin",
-        "sha256": "4e18c9eec74169a56c6db3fe7a99a8fb89eed8c44221ac0939afc4ba5a2f56d1",
-        "size": 1365168,
-        "filesystem_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v46/spiffs-esp32-s3-headless.bin",
+        "firmware_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v47/firmware-esp32-s3-headless.bin",
+        "sha256": "cd8ab3da5ecaca3f33785b5a0d31e55ac7fa61dd72031c6f7f3390ca796b3293",
+        "size": 1365552,
+        "filesystem_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v47/spiffs-esp32-s3-headless.bin",
         "filesystem_sha256": "aa36765e85397bda65a0943aef9e7b4c38022fd70ef54c99095d3807a9bfd19c",
         "filesystem_size": 4194304
       }
     },
-    "changelog": "FW46+FS35 — OTA : wrap if (!_ota_pending_boot) { … } autour des blocs  \n  Logs / MQTT / Dallas / Relais / mDNS / WebServer. Pour\n  mDNS dans le cas pending + auto-discover, je remplace   \n  mdns_hello() par un MDNS.begin() minimal sans services."
+    "changelog": "FW47+FS35 — Refactor Phase 1 (snapshot bref sous mutex)"
   }
 }

@@ -2,20 +2,20 @@
   "_comment": "Watt-Sensors OTA pull manifest. Lu par le firmware Watt-Sensors via raw.githubusercontent.com. SHA-256 = hash du firmware.bin sortie de pio run.",
   "_doc": "Format : pour chaque firmware (sensors), lister les envs supportés avec leur firmware_url GitHub Release + sha256 + size. filesystem_url/sha/size optionnels par env.",
   "sensors": {
-    "version": "2026.05",
+    "version": "2026.04",
     "build_fw": 43,
-    "build_fs": 32,
-    "released_at": "2026-05-06T16:18:00Z",
+    "build_fs": 33,
+    "released_at": "2026-05-06T15:30:22Z",
     "envs": {
       "watt-sensors": {
-        "firmware_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v43/sensors-firmware.bin",
-        "sha256": "ea60d3960241d725b5e730d9bb63364413a4e7486d6a6eb1d5984b4db00cdcc1",
+        "firmware_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v43/firmware-watt-sensors.bin",
+        "sha256": "56cba4dae18b880e3af840a8813aee57f69187d11b6cafd434e2255bbb9b592e",
         "size": 1336224,
-        "filesystem_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v43/sensors-spiffs.bin",
-        "filesystem_sha256": "aa7cc4a7ccc7026cb365334b47b35d32270c7fafd65bdb9beb8ace84c7feed6c",
+        "filesystem_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v43/spiffs-watt-sensors.bin",
+        "filesystem_sha256": "a965fd28c3d1234907201a1f30b71addaedd6a25cee69ea53e683fe9abf53308",
         "filesystem_size": 1048576
       }
     },
-    "changelog": "FW43+FS32 — Tout local dans chain bootloader sur 8 pages STA (suppression cdnjs font-awesome + Google Fonts + Google AJAX jquery). Plus aucun flux LwIP en parallèle au chain(0) au cache-clear. Évite saturation CONFIG_LWIP_MAX_SOCKETS=10."
+    "changelog": "FW43+FS33 : test wattbuild et autocommit"
   }
 }

@@ -3,19 +3,19 @@
   "_doc": "Format : pour chaque firmware (sensors), lister les envs supportés avec leur firmware_url GitHub Release + sha256 + size. filesystem_url/sha/size optionnels par env.",
   "sensors": {
     "version": "2026.05",
-    "build_fw": 39,
+    "build_fw": 40,
     "build_fs": 30,
-    "released_at": "2026-05-06T15:48:00Z",
+    "released_at": "2026-05-06T15:50:00Z",
     "envs": {
       "watt-sensors": {
-        "firmware_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v39/sensors-firmware.bin",
-        "sha256": "0a88058c9aac4f43cb0f42e6e62791f2a20ef73719b60158d5267cda5e285b57",
-        "size": 1335920,
-        "filesystem_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v39/sensors-spiffs.bin",
+        "firmware_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v40/sensors-firmware.bin",
+        "sha256": "91dcdf75ae0c5eb1e69cf218febf67fef8d0e6f5aaf4c8481e74aafaf8dcd6af",
+        "size": 1336224,
+        "filesystem_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v40/sensors-spiffs.bin",
         "filesystem_sha256": "96ae58e04646dcc1f4a197a2f865a6e6fe5bb67887b2bc0d48191532cc651529",
         "filesystem_size": 1048576
       }
     },
-    "changelog": "FW39+FS30 — Fix critique race bootloader : après cache-clear, $(document).ready exécuté avant jQuery → page rendue sans données. Helper window.afterChain(cb) appliqué sur les 8 pages STA défère le init jusqu'à chain done."
+    "changelog": "FW40+FS30 — Task perpétuelle (defer 5s post-boot, retry 5 min) qui appelle proxy_discover_now() si config.proxy_enabled. Carte 'Délégation HTTPS' du dashboard active dès startup, plus seulement après une OTA. FS30 inchangé vs v39."
   }
 }

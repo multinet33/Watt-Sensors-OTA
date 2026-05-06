@@ -3,19 +3,19 @@
   "_doc": "Format : pour chaque firmware (sensors), lister les envs supportés avec leur firmware_url GitHub Release + sha256 + size. filesystem_url/sha/size optionnels par env.",
   "sensors": {
     "version": "2026.05",
-    "build_fw": 37,
+    "build_fw": 38,
     "build_fs": 29,
-    "released_at": "2026-05-06T15:15:00Z",
+    "released_at": "2026-05-06T15:35:00Z",
     "envs": {
       "watt-sensors": {
-        "firmware_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v37/sensors-firmware.bin",
-        "sha256": "cd8211a007006ef753564ba57c1393f8b00bc5600a04e338767ece251646f476",
+        "firmware_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v38/sensors-firmware.bin",
+        "sha256": "b53a0dbf5a86dfa4dba10b3fae839ba7ecea6976d3a3f7406819b05e537633a2",
         "size": 1335920,
-        "filesystem_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v37/sensors-spiffs.bin",
+        "filesystem_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v38/sensors-spiffs.bin",
         "filesystem_sha256": "d9317af41656a2a840aef8d92a0e086ef29cd6bfe791862159c9b338b04dd759",
         "filesystem_size": 1048576
       }
     },
-    "changelog": "FW37+FS29 — OTA durci (A+B+C). A: seuil heap pre-check 35→30 KB + bail-out propre <32 KB. B: settle 8s avant pre-check phase 2 FS (anti-fragmentation post-boot pending). C: routage optionnel via watt-proxy HTTP plain LAN (bypass mbedtls handshake côté sensors). UI Configuration → Proxy HTTPS (toggle, host manuel, mDNS auto, status, btn discover) persistée en NVS namespace 'config'. Card 'Délégation HTTPS' sur dashboard (calque guardian, visible si proxy_enabled). Sidebar brand 'Watt-Sensors' → 'sensors' sur 8 pages STA. i18n 5 langues (fr/en/es/it/de)."
+    "changelog": "FW38+FS29 — Rebuild firmware avec BUILD_FS=29 compile-time (fix mismatch carte Identité signalé sur v37, où le binary FW37 avait BUILD_FS=27 alors que SPIFFS embarquait /fs_build=29). Aucune autre modif fonctionnelle vs v37."
   }
 }

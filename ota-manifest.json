@@ -3,19 +3,19 @@
   "_doc": "Format : pour chaque firmware (sensors), lister les envs supportés avec leur firmware_url GitHub Release + sha256 + size. filesystem_url/sha/size optionnels par env.",
   "sensors": {
     "version": "2026.05",
-    "build_fw": 42,
-    "build_fs": 31,
-    "released_at": "2026-05-06T16:04:00Z",
+    "build_fw": 43,
+    "build_fs": 32,
+    "released_at": "2026-05-06T16:18:00Z",
     "envs": {
       "watt-sensors": {
-        "firmware_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v42/sensors-firmware.bin",
-        "sha256": "08b0941b797f122e2d11eda760d66a37f7414b939c4b94de60d9886cf652b5f3",
+        "firmware_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v43/sensors-firmware.bin",
+        "sha256": "ea60d3960241d725b5e730d9bb63364413a4e7486d6a6eb1d5984b4db00cdcc1",
         "size": 1336224,
-        "filesystem_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v42/sensors-spiffs.bin",
-        "filesystem_sha256": "5411daac36fa71d9a7725a0492dd2579ac065d26f43fb63551eb31aa0c388842",
+        "filesystem_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v43/sensors-spiffs.bin",
+        "filesystem_sha256": "aa7cc4a7ccc7026cb365334b47b35d32270c7fafd65bdb9beb8ace84c7feed6c",
         "filesystem_size": 1048576
       }
     },
-    "changelog": "FW42+FS31 — Bail-out OTA_HEAP_CRITICAL 32→36 KB. Fix crash StoreProhibited terrain à heap=32756 (la fenêtre 32-36 KB faisait crasher beginCriticalSection() en suspend tasks). Maintenant reboot pending propre dans cette fenêtre. SPIFFS inchangé."
+    "changelog": "FW43+FS32 — Tout local dans chain bootloader sur 8 pages STA (suppression cdnjs font-awesome + Google Fonts + Google AJAX jquery). Plus aucun flux LwIP en parallèle au chain(0) au cache-clear. Évite saturation CONFIG_LWIP_MAX_SOCKETS=10."
   }
 }

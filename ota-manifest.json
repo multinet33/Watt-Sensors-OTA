@@ -3,19 +3,19 @@
   "_doc": "Format : pour chaque firmware (sensors), lister les envs supportés avec leur firmware_url GitHub Release + sha256 + size. filesystem_url/sha/size optionnels par env.",
   "sensors": {
     "version": "2026.04",
-    "build_fw": 43,
-    "build_fs": 33,
-    "released_at": "2026-05-06T15:30:22Z",
+    "build_fw": 44,
+    "build_fs": 34,
+    "released_at": "2026-05-06T15:39:27Z",
     "envs": {
       "watt-sensors": {
-        "firmware_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v43/firmware-watt-sensors.bin",
-        "sha256": "56cba4dae18b880e3af840a8813aee57f69187d11b6cafd434e2255bbb9b592e",
+        "firmware_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v44/firmware-watt-sensors.bin",
+        "sha256": "0397e59f69bbb2cf68b8323afd33c58f18c82f45fe9f5af2b35d1b1fa8231d13",
         "size": 1336224,
-        "filesystem_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v43/spiffs-watt-sensors.bin",
-        "filesystem_sha256": "a965fd28c3d1234907201a1f30b71addaedd6a25cee69ea53e683fe9abf53308",
+        "filesystem_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v44/spiffs-watt-sensors.bin",
+        "filesystem_sha256": "60745b3eb0a6e43914b187731904fc0d103553f696b14015e2588fa35706f446",
         "filesystem_size": 1048576
       }
     },
-    "changelog": "FW43+FS33 : test wattbuild et autocommit"
+    "changelog": "Bump sensors : FW=44, FS=34 test watt-build"
   }
 }

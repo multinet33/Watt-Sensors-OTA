@@ -3,20 +3,19 @@
   "_doc": "Format : pour chaque firmware (sensors), lister les envs supportés avec leur firmware_url GitHub Release + sha256 + size. filesystem_url/sha/size optionnels par env.",
   "sensors": {
     "version": "2026.05",
-    "_test_phase_note": "build_fw=9999 et build_fs=9999 sentinelles pendant la phase de test EVO-104 portage. Les binaires pointés sont FW31/FS21 watt-sensors.",
-    "build_fw": 9999,
-    "build_fs": 9999,
-    "released_at": "2026-05-05T08:00:00Z",
+    "build_fw": 36,
+    "build_fs": 26,
+    "released_at": "2026-05-06T14:40:00Z",
     "envs": {
       "watt-sensors": {
-        "firmware_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v31/firmware-watt-sensors.bin",
-        "sha256": "1e709f6acc782a4af099dfe08776c56f9cf38ce31b49e05fafb0a016bd84ccfe",
-        "size": 1314016,
-        "filesystem_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v31/spiffs-watt-sensors.bin",
-        "filesystem_sha256": "790453f2be7162d685999245bc8f1b8828a037e947dbcbc29105ae1ad6d734aa",
+        "firmware_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v36/sensors-firmware.bin",
+        "sha256": "0f6d18be23aa344124a9f4d97648f7bc5e30d860641b7dff58f6b4707a81872f",
+        "size": 1326896,
+        "filesystem_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v36/sensors-spiffs.bin",
+        "filesystem_sha256": "5d96df6bfa781d4f83b2ce861c1e98c878036477b7953491caf07f838e412b32",
         "filesystem_size": 1048576
       }
     },
-    "changelog": "FW31+FS21 / EVO-104 portage initial — pipeline OTA pull intégré (FW + FS via esp_partition_write direct), recovery mode page PROGMEM, modal UX moins anxiogène (label inline rebooting, striped+animated bar), pollUntilReady strict 60s. Tasks suspendues en section critique : myTaskdallasread, myTasksendtomqtt, myTaskmdnsdiscovery, myTaskserialreadtask. myTaskkeepwifialive2 GARDÉE active. Sidebar /update retiré des 7 pages."
+    "changelog": "FW36+FS26 — Mega update 2026-05-06. Modale OTA refondue (anneau + countdown 180s + seenStarted/versionBumped/seenPhase2). Fix critique check OTA FS basé sur /fs_build SPIFFS marker (évite désync FW/FS silencieuse). Carte Identité avec badge mismatch FW/FS. Topbar épurée. i18n ES/IT/DE complets (5 langues). Renommage 'Info système' → 'Informations système'. chain(0) bootloader sur 7 pages mode normal (anti burst LwIP cache-clear)."
   }
 }

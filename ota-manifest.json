@@ -7,14 +7,6 @@
     "build_fs": 37,
     "released_at": "2026-05-06T17:52:19Z",
     "envs": {
-      "watt-sensors": {
-        "firmware_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v45/firmware-watt-sensors.bin",
-        "sha256": "d94751a619c64148028457bff6498726b03ec695ae5a3526cc4226c07f9ba626",
-        "size": 1336224,
-        "filesystem_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v45/spiffs-watt-sensors.bin",
-        "filesystem_sha256": "6819f39ab71ff60f7903d4352b736812939eee99d269e7ee28dc67e287715ddf",
-        "filesystem_size": 1048576
-      },
       "esp32-s3-headless": {
         "firmware_url": "https://github.com/multinet33/Watt-Sensors-OTA/releases/download/v47/firmware-esp32-s3-headless.bin",
         "sha256": "cd8ab3da5ecaca3f33785b5a0d31e55ac7fa61dd72031c6f7f3390ca796b3293",
